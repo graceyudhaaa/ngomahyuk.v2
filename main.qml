@@ -245,7 +245,7 @@ ApplicationWindow {
 
         // DIALOG KOS (HALAMAN UNTUK KOS)
 
-        Dialog {
+        Rectangle{
             id : dialogkos
             width: parent.width
             height: parent.height
@@ -292,7 +292,7 @@ ApplicationWindow {
                     }
                 }
             }
-           /* NumberAnimation {
+            /* NumberAnimation {
                 id : keluar
                 target: dialogkos
                 property: "x"
@@ -379,7 +379,7 @@ ApplicationWindow {
                     y: 28
                     width: 102
                     height: 38
-                    color: "#ff0000"
+                    color: "#ef3644"
                 }
             }
 
@@ -401,6 +401,15 @@ ApplicationWindow {
                 text: qsTr("KOS DOLOR")
                 font.bold: true
                 font.pixelSize: 18
+
+                Rectangle {
+                    id: rectangle4
+                    x: 145
+                    y: 126
+                    width: 105
+                    height: 37
+                    color: "#ef3644"
+                }
             }
 
             Text {
@@ -451,7 +460,7 @@ ApplicationWindow {
                 y: 227
                 width: 103
                 height: 37
-                color: "#ff0000"
+                color: "#ef3644"
             }
 
             ToolSeparator{
@@ -468,17 +477,18 @@ ApplicationWindow {
                 y: 231
                 width: 94
                 height: 29
-                text: qsTr("HUBUNGI")
-                font.weight: Font.DemiBold
-                font.bold: true
-                font.pointSize: 10
-                onClicked:{
-                    dialogkos1.open()
-                }
-
                 background: Rectangle{
                     id: background2
                     color: "#ffffff"
+                }
+                contentItem: Text {
+                    id: name1
+                    text: qsTr("HUBUNGI")
+                    font.bold: true
+                    font.pointSize: 10
+                    verticalAlignment: Text.AlignVCenter
+                    horizontalAlignment: Text.AlignHCenter
+                    color: "red"
                 }
             }
 
@@ -488,20 +498,26 @@ ApplicationWindow {
                 y: 231
                 width: 95
                 height: 29
-                text: qsTr("BOOK NOW")
-                font.weight: Font.DemiBold
-                font.bold: true
-                font.pointSize: 10
-
-                 background: Rectangle{
+                onClicked:{
+                    dialogkos1.open()
+                }
+                background: Rectangle{
                     id: bcakground4
+                    color: "#ef3644"
+                }
+                contentItem: Text {
+                    id: name
+                    text: "CEK"
+                    font.bold: true
+                    font.pointSize: 10
+                    horizontalAlignment: Text.AlignHCenter
                     color: "#ffffff"
                 }
             }
 
             // HALAMAN UNTUK SPESIFIKASI KOS
 
-          Dialog {
+            Rectangle{
                 id : dialogkos1
                 width: parent.width
                 height: parent.height
@@ -524,7 +540,7 @@ ApplicationWindow {
                         source: "header.png"
                     }
                 }
-           /*     NumberAnimation {
+                /*     NumberAnimation {
                     id : keluar1
                     target: dialogkos1
                     to:applicationWindow
@@ -541,6 +557,59 @@ ApplicationWindow {
                 }
                 */
             }
+
+            Rectangle {
+                id: rectangle3
+                x: 519
+                y: 418
+                width: 103
+                height: 37
+                color: "#ef3644"
+
+                Button {
+                    id: button5
+                    x: 8
+                    y: 5
+                    width: 87
+                    height: 27
+                    background: Rectangle{
+                        color: "#ef3644"
+                    }
+                    contentItem: Text {
+                        id: name4
+                        text: qsTr("CEK")
+                        font.bold: true
+                        font.family: "Verdana"
+                        font.pointSize: 10
+                        verticalAlignment: Text.AlignVCenter
+                        horizontalAlignment: Text.AlignHCenter
+                        color: "#ffffff"
+                    }
+                }
+            }
+
+            Button {
+                id: button4
+                x: 400
+                y: 423
+                width: 94
+                height: 28
+
+                background: Rectangle{
+                    id: background4
+                    color: "#ffffff"
+                }
+                contentItem: Text {
+                    id: name3
+                    text: qsTr("HUBUNGI")
+                    font.bold: true
+                    font.pointSize: 10
+                    verticalAlignment: Text.AlignVCenter
+                    horizontalAlignment: Text.AlignHCenter
+                    color: "red"
+                }
+            }
+
 
         }
     }
