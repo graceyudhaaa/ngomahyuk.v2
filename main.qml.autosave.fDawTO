@@ -225,9 +225,6 @@ ApplicationWindow {
             anchors.topMargin: 198
             anchors.left: toolSeparator.right
             anchors.leftMargin: 213
-            onClicked: {
-                dialogkontrakan.open()
-            }
             background: Rectangle {
                 id: background1
                 color: "#ef3644"
@@ -246,12 +243,8 @@ ApplicationWindow {
             }
         }
 
-
-
-        /////////////////////////      DIALOG KOS (HALAMAN UNTUK KOS)       /////////////////////////
-
-
-           Dialog{
+        // DIALOG KOS (HALAMAN UNTUK KOS)
+           Rectangle{
             id : dialogkos
             width: parent.width
             height: parent.height
@@ -394,10 +387,10 @@ ApplicationWindow {
 
                 Rectangle {
                     id: rectangle4
-                    x: 142
-                    y: 127
-                    width: 104
-                    height: 36
+                    x: 145
+                    y: 126
+                    width: 105
+                    height: 37
                     color: "#ef3644"
                 }
             }
@@ -502,13 +495,11 @@ ApplicationWindow {
                     font.pointSize: 10
                     horizontalAlignment: Text.AlignHCenter
                     color: "#ffffff"
-                    }
                 }
-           }
+            }
 
-            ///////////////////////               HALAMAN UNTUK SPESIFIKASI KOS                     ////////////////////////
-
-               Dialog{
+            // HALAMAN UNTUK SPESIFIKASI KOS
+               Rectangle{
                 id : dialogkos1
                 width: parent.width
                 height: parent.height
@@ -614,8 +605,8 @@ ApplicationWindow {
 
             Rectangle {
                 id: rectangle3
-                x: -121
-                y: 419
+                x: 519
+                y: 418
                 width: 103
                 height: 37
                 color: "#ef3644"
@@ -644,8 +635,8 @@ ApplicationWindow {
 
             Button {
                 id: button4
-                x: -244
-                y: 424
+                x: 400
+                y: 423
                 width: 94
                 height: 28
 
@@ -663,10 +654,9 @@ ApplicationWindow {
                     color: "red"
                         }
                     }
-
-           ////////////////////////////         DIALOG KONTRAKAN           //////////////////////
-
-           Dialog{
+                }
+           
+           Rectangle{
             id : dialogkontrakan
             width: parent.width
             height: parent.height
@@ -710,9 +700,9 @@ ApplicationWindow {
                     height: 50
                     onClicked:{
                         this.close();
-                      }
-                  }
-               }
+                    }
+                }
             }
-       }
+            }
+        }
 }
