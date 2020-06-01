@@ -505,7 +505,6 @@ ApplicationWindow {
                     }
                 }
            }
-
             ///////////////////////               HALAMAN UNTUK SPESIFIKASI KOS                     ////////////////////////
 
                Dialog{
@@ -663,6 +662,7 @@ ApplicationWindow {
                     color: "red"
                         }
                     }
+           }
 
            ////////////////////////////         DIALOG KONTRAKAN           //////////////////////
 
@@ -715,4 +715,4 @@ ApplicationWindow {
                }
             }
        }
-}
+
