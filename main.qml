@@ -428,7 +428,7 @@ ApplicationWindow {
                 id: element14
                 x: 249
                 y: 385
-                text: qsTr("Harga               : Rp. 3.000.000,00 - Rp. 4.000.000 / tahun")
+                text: qsTr("Harga               : Rp. 2.000.000,00 - Rp. 3.500.000 / tahun")
                 font.family: "Verdana"
                 font.pixelSize: 12
             }
@@ -504,6 +504,9 @@ ApplicationWindow {
                     font.bold: true
                     font.pointSize: 10
                     font.family: "Verdana"
+                    onClicked: {
+                        dialogkos2.open()
+                    }
 
                     background: Rectangle{
                         color: "#ef3644"
@@ -556,6 +559,9 @@ ApplicationWindow {
            }
             ///////////////////////               HALAMAN UNTUK SPESIFIKASI KOS                     ////////////////////////
 
+           ////////////////////////                    SPESIFIKASI KOS 1                             //////////////////
+
+
                Dialog {
                 id : dialogkos1
                 width: parent.width
@@ -582,10 +588,10 @@ ApplicationWindow {
 
                 BorderImage {
                     id: borderImage5
-                    x: 8
+                    x: 17
                     y: 115
-                    width: 279
-                    height: 208
+                    width: 265
+                    height: 185
                     source: "Bisnis-kos-kosan.png"
                 }
 
@@ -657,14 +663,118 @@ ApplicationWindow {
                     width: 323
                     height: 70
                     text: qsTr("Kos dengan hunian sangat nyaman dan fasilitas seperti hotel. ")
+                      }
+                    }
+                  }
+
+            ////////////////////////////////    SPESIFIKASI KOS 2         /////////////////////////////
+
+                 Dialog {
+                  id : dialogkos2
+                  width: parent.width
+                  height: parent.height
+                  x : -width
+
+                 Rectangle {
+                 id: rectangle10
+                 x: 0
+                 y: 0
+                 width: parent.width
+                 height: 85
+                 color: "#ef3644"
+
+                 BorderImage {
+                    id: borderImage6
+                    x: 220
+                    y: 0
+                    width: 255
+                    height: 69
+                    source: "header.png"
+                   }
+               }
+
+                 Text {
+                 id: element23
+                 x: 293
+                 y: 115
+                 width: 196
+                 height: 19
+                 text: qsTr("KOS LOREM")
+                 font.bold: true
+                 font.pixelSize: 18
+                 }
+
+                 Text {
+                 id: element24
+                 x: 310
+                 y: 140
+                 font.pixelSize: 12
+                 }
+
+                 Text {
+                 id: element25
+                 x: 293
+                 y: 147
+                 text: qsTr("Alamat            : Jalan Lorem, No. 01 RT6/RW1")
+                 font.pixelSize: 12
+                 }
+
+                 Text {
+                    id: element26
+                    x: 293
+                    y: 167
+                    width: 216
+                    height: 14
+                    text: qsTr("Jumlah Kamar  : 20")
+                    font.pixelSize: 12
+                   }
+
+                Text {
+                id: element27
+                x: 293
+                y: 187
+                text: qsTr("Gender           : Laki-laki")
+                font.pixelSize: 12
                 }
-            }
+
+                Text {
+                    id: element28
+                    x: 293
+                    y: 207
+                    text: qsTr("Harga             : Rp. 2.000.000,00 - Rp. 3.500.000 / tahun")
+                    font.pixelSize: 12
                 }
 
+                Text {
+                    id: element29
+                    x: 293
+                    y: 233
+                    text: qsTr("DESKRIPSI")
+                    font.bold: true
+                    font.pixelSize: 12
+                }
 
-           ////////////////////////////         DIALOG KONTRAKAN           //////////////////////
+                 Label {
+                     id: label1
+                     x: 293
+                     y: 253
+                     width: 323
+                     height: 70
+                     text: qsTr("Kos dengan gaya artistik penuh kenyaman, seperti lagi sama doi.")
+                 }
 
-           Dialog{
+                 BorderImage {
+                     id: borderImage7
+                     x: 16
+                     y: 115
+                     width: 262
+                     height: 184
+                     source: "kos2.jpg"
+                 }
+                 }
+                 ////////////////////////////         DIALOG KONTRAKAN           //////////////////////
+
+           Dialog {
             id : dialogkontrakan
             width: parent.width
             height: parent.height
@@ -679,7 +789,7 @@ ApplicationWindow {
                 color: "#ef3644"
 
                 BorderImage {
-                    id: borderImage6
+                    id: borderImage8
                     x: 220
                     y: 0
                     width: 255
@@ -688,7 +798,7 @@ ApplicationWindow {
                 }
 
                 Text {
-                    id: element23
+                    id: element30
                     x: 33
                     y: 14
                     width: 56
