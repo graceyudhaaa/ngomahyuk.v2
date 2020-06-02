@@ -1,7 +1,5 @@
-import QtQuick 2.12
+import QtQuick 2.5
 import QtQuick.Controls 2.5
-import QtQuick.Layouts 1.3
-
 
 ApplicationWindow {
     id: applicationWindow
@@ -251,7 +249,7 @@ ApplicationWindow {
         /////////////////////////      DIALOG KOS (HALAMAN UNTUK KOS)       /////////////////////////
 
 
-           Dialog{
+           Dialog {
             id : dialogkos
             width: parent.width
             height: parent.height
@@ -391,15 +389,6 @@ ApplicationWindow {
                 text: qsTr("KOS DOLOR")
                 font.bold: true
                 font.pixelSize: 18
-
-                Rectangle {
-                    id: rectangle4
-                    x: 142
-                    y: 127
-                    width: 104
-                    height: 36
-                    color: "#ef3644"
-                }
             }
 
             Text {
@@ -492,7 +481,7 @@ ApplicationWindow {
                     dialogkos1.open()
                 }
                 background: Rectangle{
-                    id: bcakground4
+                    id: background4
                     color: "#ef3644"
                 }
                 contentItem: Text {
@@ -502,12 +491,72 @@ ApplicationWindow {
                     font.pointSize: 10
                     horizontalAlignment: Text.AlignHCenter
                     color: "#ffffff"
+                }
+            }
+
+                Button {
+                    id: button5
+                    x: 521
+                    y: 416
+                    width: 100
+                    height: 37
+                    text: qsTr("CEK")
+                    font.bold: true
+                    font.pointSize: 10
+                    font.family: "Verdana"
+
+                    background: Rectangle{
+                        color: "#ef3644"
+                    }
+                    contentItem: Text {
+                        id: text1
+                        text: qsTr("CEK")
+                        font.bold: true
+                        font.pointSize: 10
+                        font.family: "Verdana"
+                        verticalAlignment: Text.AlignVCenter
+                        horizontalAlignment: Text.AlignHCenter
+                        color: "#ffffff"
+                    }
+                }
+
+                Rectangle {
+                    id: rectangle3
+                    x: 393
+                    y: 417
+                    width: 101
+                    height: 37
+                    color: "#ef3644"
+                }
+
+                Button {
+                    id: button4
+                    x: 398
+                    y: 421
+                    width: 91
+                    height: 28
+                    text: qsTr("HUBUNGI")
+                    font.bold: true
+                    font.pointSize: 10
+                    font.family: "Verdana"
+                    background: Rectangle{
+                        color: "#ffffff"
+                    }
+                    contentItem: Text {
+                        id: text2
+                        text: qsTr("HUBUNGI")
+                        font.bold: true
+                        font.pointSize: 10
+                        font.family: "Verdana"
+                        verticalAlignment: Text.AlignVCenter
+                        horizontalAlignment: Text.AlignHCenter
+                        color: "#ef3644"
                     }
                 }
            }
             ///////////////////////               HALAMAN UNTUK SPESIFIKASI KOS                     ////////////////////////
 
-               Dialog{
+               Dialog {
                 id : dialogkos1
                 width: parent.width
                 height: parent.height
@@ -610,59 +659,8 @@ ApplicationWindow {
                     text: qsTr("Kos dengan hunian sangat nyaman dan fasilitas seperti hotel. ")
                 }
             }
-
-            Rectangle {
-                id: rectangle3
-                x: -121
-                y: 419
-                width: 103
-                height: 37
-                color: "#ef3644"
-
-                Button {
-                    id: button5
-                    x: 8
-                    y: 5
-                    width: 87
-                    height: 27
-                    background: Rectangle{
-                        color: "#ef3644"
-                    }
-                    contentItem: Text {
-                        id: name4
-                        text: qsTr("CEK")
-                        font.bold: true
-                        font.family: "Verdana"
-                        font.pointSize: 10
-                        verticalAlignment: Text.AlignVCenter
-                        horizontalAlignment: Text.AlignHCenter
-                        color: "#ffffff"
-                    }
                 }
-            }
 
-            Button {
-                id: button4
-                x: -244
-                y: 424
-                width: 94
-                height: 28
-
-                background: Rectangle{
-                    id: background4
-                    color: "#ffffff"
-                }
-                contentItem: Text {
-                    id: name3
-                    text: qsTr("HUBUNGI")
-                    font.bold: true
-                    font.pointSize: 10
-                    verticalAlignment: Text.AlignVCenter
-                    horizontalAlignment: Text.AlignHCenter
-                    color: "red"
-                        }
-                    }
-           }
 
            ////////////////////////////         DIALOG KONTRAKAN           //////////////////////
 
