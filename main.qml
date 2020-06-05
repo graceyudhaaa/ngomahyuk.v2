@@ -1,6 +1,7 @@
 import QtQuick 2.5
 import QtQuick.Controls 2.5
 
+
 ApplicationWindow {
     id: applicationWindow
     width: 640
@@ -562,7 +563,7 @@ ApplicationWindow {
            ////////////////////////                    SPESIFIKASI KOS 1                             //////////////////
 
 
-               Dialog {
+              Dialog {
                 id : dialogkos1
                 width: parent.width
                 height: parent.height
@@ -643,7 +644,7 @@ ApplicationWindow {
                     id: element21
                     x: 293
                     y: 207
-                    text: qsTr("Harga             : Rp. 3.000.000,00 - Rp. 4.500.000 / tahun")
+                    text: qsTr("Harga             : Rp. 7.000.000,00 - Rp. 8.500.000 / tahun")
                     font.pixelSize: 12
                 }
 
@@ -663,6 +664,163 @@ ApplicationWindow {
                     width: 323
                     height: 70
                     text: qsTr("Kos dengan hunian sangat nyaman dan fasilitas seperti hotel. ")
+                }
+
+                      Button {
+                          id: button6
+                          x: 443
+                          y: 387
+                          width: 145
+                          height: 36
+                          text: qsTr("BOOK NOW")
+                          font.bold: true
+                          font.pointSize: 15
+                          font.family: "Verdana"
+
+                          background: Rectangle{
+                              id: background5
+                              color: "#ef3644"
+                          }
+                          contentItem: Text {
+                              id: text3
+                              text: qsTr("BOOK NOW")
+                              font.bold: true
+                              font.pointSize: 13
+                              font.family: "Verdana"
+                              verticalAlignment: Text.AlignVCenter
+                              horizontalAlignment: Text.AlignHCenter
+                              color: "#ffffff"
+                          }
+                      }
+
+                      Text {
+                          id: element31
+                          x: 293
+                          y: 395
+                          width: 138
+                          height: 20
+                          text: qsTr("Rp. 7.350.000")
+                          font.bold: true
+                          font.family: "Arial"
+                          verticalAlignment: Text.AlignVCenter
+                          horizontalAlignment: Text.AlignHCenter
+                          font.pixelSize: 21
+                      }
+
+                      Rectangle {
+                          id: rectangle4
+                          x: 17
+                          y: 321
+                          width: 73
+                          height: 31
+                          color: "#fbfbfb"
+                          border.color: "#f73737"
+
+                          Text {
+                              id: element32
+                              x: 8
+                              y: 8
+                              width: 60
+                              height: 14
+                              text: qsTr("Kamar")
+                              font.bold: true
+                              font.family: "Arial"
+                              verticalAlignment: Text.AlignVCenter
+                              horizontalAlignment: Text.AlignHCenter
+                              font.pixelSize: 14
+
+                              MouseArea {
+                                  anchors.fill: parent
+                                  id: mouseArea2
+                                  x: 17
+                                  y: 321
+                                  width: 76
+                                  height: 30
+                                  anchors.rightMargin: 0
+                                  anchors.bottomMargin: 0
+                                  anchors.leftMargin: 0
+                                  anchors.topMargin: 0
+
+                                  onPressed: parent.color = "red"
+                                  onReleased: parent.color = "black"
+                              }
+                          }
+                      }
+
+                      Rectangle {
+                          id: rectangle6
+                          x: 113
+                          y: 321
+                          width: 73
+                          height: 31
+                          color: "#ffffff"
+                          border.color: "#f73737"
+
+                          Text {
+                              id: element33
+                              x: 5
+                              y: 8
+                              text: qsTr("KM Dalam")
+                              font.bold: true
+                              font.family: "Arial"
+                              verticalAlignment: Text.AlignVCenter
+                              horizontalAlignment: Text.AlignHCenter
+                              font.pixelSize: 13
+                              MouseArea {
+                                  anchors.fill: parent
+                                  id: mouseArea3
+                                  x: 17
+                                  y: 321
+                                  width: 76
+                                  height: 30
+                                  anchors.rightMargin: 0
+                                  anchors.bottomMargin: 0
+                                  anchors.leftMargin: 0
+                                  anchors.topMargin: 0
+
+                                  onPressed: parent.color = "red"
+                                  onReleased: parent.color = "black"
+                              }
+                          }
+
+                      }
+
+                      Rectangle {
+                          id: rectangle7
+                          x: 209
+                          y: 321
+                          width: 73
+                          height: 31
+                          color: "#ffffff"
+                          border.color: "#f73737"
+
+                          Text {
+                              id: element34
+                              x: 11
+                              y: 8
+                              text: qsTr("AC + TV")
+                              font.bold: true
+                              font.family: "Arial"
+                              verticalAlignment: Text.AlignVCenter
+                              horizontalAlignment: Text.AlignHCenter
+                              font.pixelSize: 13
+
+                              MouseArea {
+                                  anchors.fill: parent
+                                  id: mouseArea4
+                                  x: 17
+                                  y: 321
+                                  width: 76
+                                  height: 30
+                                  anchors.rightMargin: 0
+                                  anchors.bottomMargin: 0
+                                  anchors.leftMargin: 0
+                                  anchors.topMargin: 0
+
+                                  onPressed: parent.color = "red"
+                                  onReleased: parent.color = "black"
+                              }
+                          }
                       }
                     }
                   }
