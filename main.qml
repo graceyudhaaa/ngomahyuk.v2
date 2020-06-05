@@ -357,7 +357,7 @@ ApplicationWindow {
                 y: 199
                 width: 373
                 height: 14
-                text: qsTr("Harga              : Rp. 3.000.000,00 - Rp. 4.500.000 / tahun")
+                text: qsTr("Harga              : Rp. 7.000.000,00 - Rp. 8.500.000 / tahun")
                 font.family: "Verdana"
                 elide: Text.ElideNone
                 font.pixelSize: 12
