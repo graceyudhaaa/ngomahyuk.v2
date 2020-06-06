@@ -11,6 +11,12 @@ ApplicationWindow {
     visible: true
 
     // HALAMAN UTAMA
+    Loader{
+        id: kos
+        active: true
+        anchors.fill: parent
+    }
+
     Page {
         anchors.centerIn: parent
         anchors.fill: parent
@@ -51,9 +57,14 @@ ApplicationWindow {
             anchors.topMargin: 198
             anchors.right: toolSeparator.left
             anchors.rightMargin: 28
-            onClicked:{
-                dialogkos.open();
+            MouseArea{
+                anchors.fill: parent
+                onClicked:{
+                    kos.source = "Kos.qml";
+                }
+
             }
+
 
             background: Rectangle {
                 id: background
@@ -250,7 +261,7 @@ ApplicationWindow {
         /////////////////////////      DIALOG KOS (HALAMAN UNTUK KOS)       /////////////////////////
 
 
-           Dialog {
+           Rectangle {
             id : dialogkos
             width: parent.width
             height: parent.height
@@ -563,7 +574,7 @@ ApplicationWindow {
            ////////////////////////                    SPESIFIKASI KOS 1                             //////////////////
 
 
-              Dialog {
+              Rectangle {
                 id : dialogkos1
                 width: parent.width
                 height: parent.height
@@ -827,7 +838,7 @@ ApplicationWindow {
 
             ////////////////////////////////    SPESIFIKASI KOS 2         /////////////////////////////
 
-                 Dialog {
+                 Rectangle {
                   id : dialogkos2
                   width: parent.width
                   height: parent.height
@@ -932,7 +943,7 @@ ApplicationWindow {
                  }
                  ////////////////////////////         DIALOG KONTRAKAN           //////////////////////
 
-           Dialog {
+           Rectangle {
             id : dialogkontrakan
             width: parent.width
             height: parent.height
@@ -976,9 +987,9 @@ ApplicationWindow {
                     height: 50
                     onClicked:{
                         this.close();
-                      }
-                  }
-               }
+                    }
+                }
             }
+           }
        }
 
