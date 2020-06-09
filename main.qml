@@ -6,6 +6,7 @@ ApplicationWindow {
     id: applicationWindow
     width: 640
     height: 480
+    property alias kosloader: kosloader
     title: qsTr("Tabs")
     visible: true
 
@@ -53,11 +54,9 @@ ApplicationWindow {
         MouseArea{
             anchors.fill: parent
             onClicked:{
-                kosdialog.visible = true
-                kos.active = true
-                kos.visible = true
-                kos.source = "Kos.qml"
-                console.log(kos.source)
+                kosloader.active = true
+                kosloader.visible = true
+                kosloader.source = "Kos.qml"
             }
 
         }
@@ -253,24 +252,28 @@ ApplicationWindow {
         }
     }
 
-    Page{
-        id: kosdialog
+    Loader{
+        id: kosloader
         width: 640
         height: 480
+        opacity: 1
+        clip: false
         visible: false
-
-        Loader{
-            id: kos
-            opacity: 1
-            clip: false
-            visible: false
-            active: false
-            anchors.fill: parent
-            source: ""
-            onLoaded: console.log(kos.source)
-        }
-
+        active: false
+        anchors.fill: parent
+        source: ""
     }
+
+//    Page{
+//        id: kosdialog
+//        width: 640
+//        height: 480
+//        visible: false
+//        //        property  alias back: kosloader.item.hasMouseArea
+
+
+//    }
+
 }
 
 

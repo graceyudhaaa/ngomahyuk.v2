@@ -26,7 +26,10 @@ PageBackground {
             anchors.leftMargin: 0
             anchors.topMargin: 0
             anchors.fill: parent
+            onClicked: kosloader.source = ""
         }
+
+
    }
 }
 

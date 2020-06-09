@@ -31,4 +31,5 @@ else: unix:!android: target.path = /opt/$${TARGET}/bin
 
 FORMS +=
 
-HEADERS +=
+HEADERS += \
+    Houses.h
