@@ -4,7 +4,6 @@ import QtQuick.Controls 2.13
 PageBackgroundForm {
     width: 640
     height: 480
-    color: "#ffffff"
     Rectangle {
         id: rectangle5
         x: 0
